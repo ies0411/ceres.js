@@ -54,17 +54,17 @@ Ceres Solver is an open source C++ library for modeling and solving large, compl
 
 ## Features
 
-- :sunglasses: Provides an API similar to PCL(C++), easy to use
-- 🌍 Supports all modern browsers and Node.js 14+
+- :sunglasses: Provides an API similar to Ceres-Solver(C++), easy to use
+- :purple_heart: Supports all modern browsers and Node.js 14+
 - 💪 Written in TypeScript, with predictable static typing
 - 🚀 And many, many more!
 
 ## Resources
 
-- [Documentation](https://pcljs.org/docs/tutorials/intro)
+<!-- - [Documentation](https://pcljs.org/docs/tutorials/intro)
 - [API Reference](https://pcljs.org/docs/api/about)
 - [Examples](https://pcljs.org/examples)
-- [Discussions](https://github.com/luoxuhai/pcl.js/discussions)
+- [Discussions](https://github.com/luoxuhai/pcl.js/discussions) -->
 
 ## Environment Support
 
@@ -74,17 +74,17 @@ Ceres Solver is an open source C++ library for modeling and solving large, compl
 
 ## Bundle Size
 
-> pcl.js version: latest
-
+> ceres.js version: latest
+<!-- 
 | Source        |                                                    Link                                                     |     Size      |
 | :------------ | :---------------------------------------------------------------------------------------------------------: | :-----------: |
 | pcl.js        |     [https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl.js](https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl.js)      | ~36k gzip’d |
-| pcl-core.wasm | [https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl-core.wasm](https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl-core.wasm) | ~553k gzip’d  |
+| pcl-core.wasm | [https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl-core.wasm](https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl-core.wasm) | ~553k gzip’d  | -->
 
 ## Installation
 
 ### NPM
-
+<!-- 
 ```bash
 # NPM
 npm install pcl.js
@@ -92,9 +92,9 @@ npm install pcl.js
 # Yarn
 yarn add pcl.js
 ```
-
+ -->
 ### CDN
-
+<!-- 
 ```html
 <!-- Development -->
 <script src="https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl.js"><script>
@@ -102,13 +102,13 @@ yarn add pcl.js
 <!-- Production -->
 <script src="https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl.min.js"><script>
 ```
-
+ -->
 ## Usage
 
 ### NPM
 
 #### Browser
-
+<!-- 
 ```typescript
 import * as PCL from 'pcl.js';
 
@@ -125,13 +125,13 @@ async function main() {
   });
 
   // ...
-}
+} -->
 
 main();
 ```
 
 #### Node.js
-
+<!-- 
 ```js
 const PCL = require("pcl.js");
 
@@ -142,10 +142,10 @@ async function main() {
 }
 
 main();
-```
+``` -->
 
 ### CDN
-
+<!-- 
 ```html
 <script>
 async function main() {
@@ -156,10 +156,10 @@ async function main() {
 
 main();
 </script>
-```
+``` -->
 
 ### Basic Usage Example
-
+<!-- 
 ```typescript
 // TypeScript
 
@@ -189,10 +189,10 @@ async function main() {
 
 main();
 ```
-
+ -->
 ## Changelog
 
-The [changelog](https://github.com/luoxuhai/pcl.js/releases) is regularly updated to reflect what's changed in each new release.
+<!-- The [changelog](https://github.com/luoxuhai/pcl.js/releases) is regularly updated to reflect what's changed in each new release. -->
 
 ## Roadmap
 
