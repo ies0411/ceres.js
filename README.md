@@ -94,15 +94,7 @@ yarn add pcl.js
 ```
  -->
 ### CDN
-<!-- 
-```html
-<!-- Development -->
-<script src="https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl.js"><script>
 
-<!-- Production -->
-<script src="https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl.min.js"><script>
-```
- -->
 ## Usage
 
 ### NPM
@@ -127,96 +119,33 @@ async function main() {
   // ...
 } -->
 
-main();
-```
-
-#### Node.js
-<!-- 
-```js
-const PCL = require("pcl.js");
-
-async function main() {
-  // Initialization
-  await PCL.init();
-  // ...
-}
-
-main();
-``` -->
-
-### CDN
-<!-- 
-```html
-<script>
-async function main() {
-  // Initialization, PCL is a global object.
-  await PCL.init();
-  // ...
-}
-
-main();
-</script>
-``` -->
-
-### Basic Usage Example
-<!-- 
-```typescript
-// TypeScript
-
-import * as PCL from 'pcl.js';
-
-async function main() {
-  await PCL.init({
-    url: 'https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl-core.wasm',
-  });
-
-  // Get PCD file
-  const data = await fetch('https://cdn.jsdelivr.net/gh/luoxuhai/pcl.js@master/data/rops_tutorial/points.pcd').then(res => res.arrayBuffer());
-  // Load PCD file data, return point cloud object
-  const cloud = PCL.loadPCDData<PCL.PointXYZ>(data, PCL.PointXYZ);
-
-  // Filtering a PointCloud using a PassThrough filter
-  // See: https://pcl.readthedocs.io/projects/tutorials/en/master/passthrough.html#passthrough
-  const pass = new PCL.PassThrough<PCL.PointXYZ>(PCL.PointXYZ);
-  pass.setInputCloud(cloud);
-  pass.setFilterFieldName('z');
-  pass.setFilterLimits(0.0, 1.0);
-  const cloudFiltered = pass.filter();
-
-  // Save filtered point cloud objects as PCD files, the content is ArrayBuffer
-  const cloudFilteredData = PCL.savePCDDataASCII(cloudFiltered);
-}
-
-main();
-```
- -->
 ## Changelog
 
 <!-- The [changelog](https://github.com/luoxuhai/pcl.js/releases) is regularly updated to reflect what's changed in each new release. -->
 
 ## Roadmap
 
-Checkout the full roadmap [here](https://github.com/users/luoxuhai/projects/3).
+<!-- Checkout the full roadmap [here](https://github.com/users/luoxuhai/projects/3). -->
 
 ## Online Development
 
-Use Gitpod, a free online dev environment for GitHub.
+<!-- Use Gitpod, a free online dev environment for GitHub. -->
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/luoxuhai/pcl.js)
+<!-- [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/luoxuhai/pcl.js) -->
 
 ## Contributing
 
-pcl.js has adopted the [Contributor Covenant](https://www.contributor-covenant.org/) as its Code of Conduct, and we expect project participants to adhere to it. Please read [the full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+ceres.js has adopted the [Contributor Covenant](https://www.contributor-covenant.org/) as its Code of Conduct, and we expect project participants to adhere to it. Please read [the full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
 Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making a pull request.
 
-Thank you to all the people who already contributed to pcl.js!
+Thank you to all the people who already contributed to ceres.js!
 
-![Contributors](https://opencollective.com/pcljs/contributors.svg?button=false)
+<!-- ![Contributors](https://opencollective.com/pcljs/contributors.svg?button=false) -->
 
 ## License
 
 This project is licensed under the terms of the [MIT license](https://github.com/luoxuhai/pcl.js/blob/master/LICENSE).
 
-[![Star History Chart](https://api.star-history.com/svg?repos=luoxuhai/pcl.js&type=Date)](https://star-history.com/#luoxuhai/pcl.js&Date)
+<!-- [![Star History Chart](https://api.star-history.com/svg?repos=luoxuhai/pcl.js&type=Date)](https://star-history.com/#luoxuhai/pcl.js&Date) -->
 
