@@ -83,7 +83,6 @@ Ceres Solver is an open source C++ library for modeling and solving large, compl
 
 ## Installation
 
-### NPM
 <!-- 
 ```bash
 # NPM
@@ -93,13 +92,7 @@ npm install pcl.js
 yarn add pcl.js
 ```
  -->
-### CDN
 
-## Usage
-
-### NPM
-
-#### Browser
 <!-- 
 ```typescript
 import * as PCL from 'pcl.js';
@@ -141,11 +134,11 @@ Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making
 
 Thank you to all the people who already contributed to ceres.js!
 
-<!-- ![Contributors](https://opencollective.com/pcljs/contributors.svg?button=false) -->
+![Contributors](https://opencollective.com/pcljs/contributors.svg?button=false)
 
 ## License
 
-This project is licensed under the terms of the [MIT license](https://github.com/luoxuhai/pcl.js/blob/master/LICENSE).
+<!-- This project is licensed under the terms of the [MIT license](https://github.com/luoxuhai/pcl.js/blob/master/LICENSE). -->
 
-<!-- [![Star History Chart](https://api.star-history.com/svg?repos=luoxuhai/pcl.js&type=Date)](https://star-history.com/#luoxuhai/pcl.js&Date) -->
+[![Star History Chart](https://api.star-history.com/svg?repos=luoxuhai/pcl.js&type=Date)](https://star-history.com/#luoxuhai/pcl.js&Date)
 
