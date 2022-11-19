@@ -140,5 +140,7 @@ Thank you to all the people who already contributed to ceres.js!
 
 <!-- This project is licensed under the terms of the [MIT license](https://github.com/luoxuhai/pcl.js/blob/master/LICENSE). -->
 
-[![Star History Chart](https://api.star-history.com/svg?repos=luoxuhai/pcl.js&type=Date)](https://star-history.com/#luoxuhai/pcl.js&Date)
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=bytebase/star-history&type=Date)](https://star-history.com/#bytebase/star-history&Date)
 
