@@ -142,5 +142,5 @@ Thank you to all the people who already contributed to ceres.js!
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=bytebase/star-history&type=Date)](https://star-history.com/#bytebase/star-history&Date)
+<!-- [![Star History Chart](https://api.star-history.com/svg?repos=bytebase/star-history&type=Date)](https://star-history.com/#bytebase/star-history&Date) -->
 
