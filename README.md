@@ -134,7 +134,7 @@ Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making
 
 Thank you to all the people who already contributed to ceres.js!
 
-![Contributors](https://opencollective.com/pcljs/contributors.svg?button=false)
+![Contributors](https://opencollective.com/ceresjs/contributors.svg?button=false)
 
 ## License
 
