@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ceres-core.dir/matrix_operate.cpp.o"
-  "CMakeFiles/ceres-core.dir/matrix_operate.cpp.o.d"
+  "CMakeFiles/ceres-core.dir/operation.cpp.o"
+  "CMakeFiles/ceres-core.dir/operation.cpp.o.d"
   "CMakeFiles/ceres-core.dir/vector_operation.cpp.o"
   "CMakeFiles/ceres-core.dir/vector_operation.cpp.o.d"
   "ceres-core.js"

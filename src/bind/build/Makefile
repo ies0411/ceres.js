@@ -129,29 +129,29 @@ ceres-core/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceres-core.dir/build.make CMakeFiles/ceres-core.dir/build
 .PHONY : ceres-core/fast
 
-matrix_operate.o: matrix_operate.cpp.o
-.PHONY : matrix_operate.o
+operation.o: operation.cpp.o
+.PHONY : operation.o
 
 # target to build an object file
-matrix_operate.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceres-core.dir/build.make CMakeFiles/ceres-core.dir/matrix_operate.cpp.o
-.PHONY : matrix_operate.cpp.o
+operation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceres-core.dir/build.make CMakeFiles/ceres-core.dir/operation.cpp.o
+.PHONY : operation.cpp.o
 
-matrix_operate.i: matrix_operate.cpp.i
-.PHONY : matrix_operate.i
+operation.i: operation.cpp.i
+.PHONY : operation.i
 
 # target to preprocess a source file
-matrix_operate.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceres-core.dir/build.make CMakeFiles/ceres-core.dir/matrix_operate.cpp.i
-.PHONY : matrix_operate.cpp.i
+operation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceres-core.dir/build.make CMakeFiles/ceres-core.dir/operation.cpp.i
+.PHONY : operation.cpp.i
 
-matrix_operate.s: matrix_operate.cpp.s
-.PHONY : matrix_operate.s
+operation.s: operation.cpp.s
+.PHONY : operation.s
 
 # target to generate assembly for a file
-matrix_operate.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceres-core.dir/build.make CMakeFiles/ceres-core.dir/matrix_operate.cpp.s
-.PHONY : matrix_operate.cpp.s
+operation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceres-core.dir/build.make CMakeFiles/ceres-core.dir/operation.cpp.s
+.PHONY : operation.cpp.s
 
 vector_operation.o: vector_operation.cpp.o
 .PHONY : vector_operation.o
@@ -186,9 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ceres-core"
-	@echo "... matrix_operate.o"
-	@echo "... matrix_operate.i"
-	@echo "... matrix_operate.s"
+	@echo "... operation.o"
+	@echo "... operation.i"
+	@echo "... operation.s"
 	@echo "... vector_operation.o"
 	@echo "... vector_operation.i"
 	@echo "... vector_operation.s"

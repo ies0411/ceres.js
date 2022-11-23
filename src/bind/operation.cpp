@@ -2,42 +2,38 @@
 #include <emscripten.h>
 #include <emscripten/bind.h>
 
-#include <Eigen/Core>
-#include <Eigen/Dense>
-#include <cstdarg>
+// #include <Eigen/Core>
+// #include <Eigen/Dense>
+// #include <cstdarg>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
 #include <iostream>
 #include <map>
-// static map< string, int > m;
-// void Init()
-// {
-// 　　m["Name"] = ENUM_NAME;
-// 　　m["Age"] = ENUM_AGE;
-// }
+#include <vector>
 
-// void func()
-// {
-// 　　switch(m[sz])
-// 　　{
-// 　　　　case ENUM_NAME:
-// 　　　　　　...
-// 　　　　　　break;
-// 　　　　case ENUM_AGE:
-// 　　　　　　...
-// 　　　　　　break;
-// 　　}
-// }
 enum Operation {
     PLUS,
     MINUS,
     MULTIPLE,
     INVERSE,
     TRANSPOSE,
-
+    DOT,
+    NORM,
+    CROSS,
 };
-// std::map<std::string, cv::Mat>().swap(calib.images_);
 
 static std::map<std::string, int> map_;
 
+void initMap() {
+    map_["plus"] = Operation::PLUS;
+    map_["minus"] = Operation::MINUS;
+    map_["multiple"] = Operation::MULTIPLE;
+    map_["inverse"] = Operation::INVERSE;
+    map_["transpose"] = Operation::TRANSPOSE;
+    map_["dot"] = Operation::DOT;
+    map_["norm"] = Operation::NORM;
+    map_["cross"] = Operation::CROSS;
+}
 void mappingValueToMatrix(int type, int rows, int cols, double *left_values, double *right_values, Eigen::MatrixXd &left_matrix, Eigen::MatrixXd &right_matrix) {
     if (type == Operation::INVERSE || type == Operation::TRANSPOSE) {
         for (int row = 0; row < rows; row++) {
@@ -66,6 +62,7 @@ void mappingValueToMatrix(int type, int rows, int cols, double *left_values, dou
 
 extern "C" {
 int EMSCRIPTEN_KEEPALIVE operationMatrix(char *operation_type, int rows, int cols, double *left_values, double *right_values, double *result) {
+    initMap();
     std::string operation_type_cpp(operation_type);
     Eigen::MatrixXd left_matrix, right_matrix, result_matrix;  // TODO exception in js
     switch (map_[operation_type_cpp]) {
@@ -87,7 +84,7 @@ int EMSCRIPTEN_KEEPALIVE operationMatrix(char *operation_type, int rows, int col
             break;
         case Operation::INVERSE:
             mappingValueToMatrix(Operation::INVERSE, rows, cols, left_values, right_values, left_matrix, right_matrix);
-
+            // TODO: exception of inverse
             result_matrix = left_matrix.inverse();
             // if (result_matrix == "NaNs") return -1;
             break;
@@ -96,6 +93,16 @@ int EMSCRIPTEN_KEEPALIVE operationMatrix(char *operation_type, int rows, int col
 
             result_matrix = left_matrix.transpose();
             // if (result_matrix == "NaNs") return -1;
+            break;
+        case Operation::DOT:
+            result_matrix = left_matrix.dot(right_matrix);
+
+            break;
+        case Operation::NORM:
+            result_matrix = left_matrix.normalized();
+            break;
+        case Operation::CROSS:
+            result_matrix = left_matrix.cross(right_matrix);
             break;
 
         default:
