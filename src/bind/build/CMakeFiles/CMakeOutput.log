@@ -1,0 +1,46 @@
+The target system is: Emscripten - 1 - x86
+The host system is: Darwin - 21.5.0 - arm64
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /Users/eunsoo/Desktop/study/FE/ceres.js/src/bind/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_54f80/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_54f80.dir/build.make CMakeFiles/cmTC_54f80.dir/build
+Building C object CMakeFiles/cmTC_54f80.dir/src.c.o
+/Users/eunsoo/Desktop/study/FE/emsdk/upstream/emscripten/emcc -DCMAKE_HAVE_LIBC_PTHREAD  -s WASM=1    -s USE_ES6_IMPORT_META=1    -s EXPORT_ES6=1    -O3    -s EXPORT_NAME='createModule'    -s EXPORTED_FUNCTIONS='["_malloc", "_free"]'    -s EXTRA_EXPORTED_RUNTIME_METHODS='["ccall","cwrap"]'    -s EXPORTED_RUNTIME_METHODS='FS'    -s ENVIRONMENT='web,webview,worker'    -s ALLOW_MEMORY_GROWTH=1    -s FORCE_FILESYSTEM=1      -MD -MT CMakeFiles/cmTC_54f80.dir/src.c.o -MF CMakeFiles/cmTC_54f80.dir/src.c.o.d -o CMakeFiles/cmTC_54f80.dir/src.c.o -c /Users/eunsoo/Desktop/study/FE/ceres.js/src/bind/build/CMakeFiles/CMakeTmp/src.c
+emcc: warning: linker setting ignored during compilation: 'WASM' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'USE_ES6_IMPORT_META' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'EXPORT_ES6' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'EXPORT_NAME' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'EXPORTED_FUNCTIONS' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'EXTRA_EXPORTED_RUNTIME_METHODS' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'EXPORTED_RUNTIME_METHODS' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'ENVIRONMENT' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'ALLOW_MEMORY_GROWTH' [-Wunused-command-line-argument]
+emcc: warning: linker setting ignored during compilation: 'FORCE_FILESYSTEM' [-Wunused-command-line-argument]
+Linking C executable cmTC_54f80.js
+/opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54f80.dir/link.txt --verbose=1
+/Users/eunsoo/Desktop/study/FE/emsdk/upstream/emscripten/emcc  -s WASM=1    -s USE_ES6_IMPORT_META=1    -s EXPORT_ES6=1    -O3    -s EXPORT_NAME='createModule'    -s EXPORTED_FUNCTIONS='["_malloc", "_free"]'    -s EXTRA_EXPORTED_RUNTIME_METHODS='["ccall","cwrap"]'    -s EXPORTED_RUNTIME_METHODS='FS'    -s ENVIRONMENT='web,webview,worker'    -s ALLOW_MEMORY_GROWTH=1    -s FORCE_FILESYSTEM=1      @CMakeFiles/cmTC_54f80.dir/objects1.rsp -o cmTC_54f80.js 
+emcc: warning: EXTRA_EXPORTED_RUNTIME_METHODS is deprecated, please use EXPORTED_RUNTIME_METHODS instead [-Wdeprecated]
+system_libs:WARNING: main() is in the input files, but "_main" is not in EXPORTED_FUNCTIONS, which means it may be eliminated as dead code. Export it if you want main() to run.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
