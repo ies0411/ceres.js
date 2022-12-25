@@ -31,7 +31,7 @@
 </p> -->
 
 <!-- <p align="center">
-  English | <a href="./README-zh_CN.md">简体中文</a>
+  English | <a href="./README-zh_CN.md"></a>
 </p> -->
 
 ## Overview
