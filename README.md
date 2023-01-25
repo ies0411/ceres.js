@@ -2,7 +2,7 @@
   <a href="https://pcljs.org" target="_blank"><img style="height: 100px" src="./logo.svg" title="pcl.js" alt="title="pcl.js"></a>
   <p align="center"><a href="https://pointclouds.org" target="_blank">Point Cloud Library (PCL)</a> for browser, powered by WebAssembly.</p>
 </p> -->
-<!-- 
+<!--
 <p align="center">
   <a href="https://github.com/luoxuhai/pcl.js/actions/workflows/test.yml">
     <img src="https://github.com/luoxuhai/pcl.js/actions/workflows/test.yml/badge.svg" alt="Tests" />
@@ -48,7 +48,7 @@ Ceres Solver is an open source C++ library for modeling and solving large, compl
   <a href="https://1t72c1.csb.app/" title="Iterative Closest Point algorithm"><img src="./website/static/img/examples/IterativeClosestPoint.jpg" width="30%" /></a>
   <a href="https://o4y07f.csb.app" title="Min-Cut Based Segmentation"><img src="./website/static/img/examples/MinCutSegmentation.jpg" width="30%" /></a>
   <a href="https://3l6tfj.csb.app" title="Extract point cloud keypoints"><img src="./website/static/img/examples/ISSKeypoint3D.jpg" width="30%" /></a>
-  
+
   <p><a href="https://pcljs.org/examples">See all demos</a></p>
 <p> -->
 
@@ -69,21 +69,21 @@ Ceres Solver is an open source C++ library for modeling and solving large, compl
 ## Environment Support
 
 | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_128x128.png" alt="Edge" width="48px" height="48px" /><br/> Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_128x128.png" alt="Firefox" width="48px" height="48px" /><br/>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_128x128.png" alt="Chrome" width="48px" height="48px" /><br/>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_128x128.png" alt="Safari" width="48px" height="48px" /><br/>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_128x128.png" alt="Opera" width="48px" height="48px" /><br/>Opera | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/node.js/node.js_128x128.png" alt="Node.js" width="48px" height="48px" /><br/>Node.js |
-| --------- | --------- | --------- | --------- | --------- | --------- | 
+| --------- | --------- | --------- | --------- | --------- | --------- |
 | 16+ | 52+ | 57+ | 11+ | 44+ | 14+
 
 ## Bundle Size
 
 > ceres.js version: latest
-<!-- 
+<!--
 | Source        |                                                    Link                                                     |     Size      |
 | :------------ | :---------------------------------------------------------------------------------------------------------: | :-----------: |
 | pcl.js        |     [https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl.js](https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl.js)      | ~36k gzip’d |
 | pcl-core.wasm | [https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl-core.wasm](https://cdn.jsdelivr.net/npm/pcl.js/dist/pcl-core.wasm) | ~553k gzip’d  | -->
 
 ## Installation
-
-<!-- 
+- emscripten  : 3.1.26 version
+<!--
 ```bash
 # NPM
 npm install pcl.js
@@ -93,7 +93,7 @@ yarn add pcl.js
 ```
  -->
 
-<!-- 
+<!--
 ```typescript
 import * as PCL from 'pcl.js';
 
